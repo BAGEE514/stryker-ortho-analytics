@@ -70,6 +70,3 @@ payment_records,
 SELECT * 
 FROM final
 ORDER BY is_stryker DESC, total_payments DESC;
--- HOW TO PRESENT THIS: Flag districts where Stryker YoY growth < 0
--- while competitors are positive — those are market share loss signals.
--- Highlight top 3 Stryker districts for the leaderboard slide.

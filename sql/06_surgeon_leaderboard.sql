@@ -69,6 +69,4 @@ FROM ranked
 WHERE company_name = 'Stryker'
  AND national_rank <= 25
 ORDER BY national_rank;
--- INSIGHT TO PRESENT: Top 25 surgeons typically account for 15-25% of
--- total Stryker payments — classic Pareto concentration.
--- Flag highest royalty-earning surgeons as key IP relationship holders.
+
