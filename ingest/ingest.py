@@ -192,8 +192,10 @@ df["payment_usd"] = pd.to_numeric(df["payment_usd"], errors="coerce")
 df["state"] = df["Recipient_State"].fillna("").str.upper().str.strip()
 
 # Surgeon full name
-first = df.get("Physician_First_Name", pd.Series([""] * len(df))).fillna("")
-last = df.get("Physician_Last_Name", pd.Series([""] * len(df))).fillna("")
+first = df.get("Covered_Recipient_First_Name",
+       df.get("Physician_First_Name", pd.Series([""] * len(df)))).fillna("")
+last = df.get("Covered_Recipient_Last_Name",
+      df.get("Physician_Last_Name", pd.Series([""] * len(df)))).fillna("")
 df["surgeon_name"] = (first + " " + last).str.strip()
 
 # City
