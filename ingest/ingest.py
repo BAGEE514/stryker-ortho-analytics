@@ -130,7 +130,7 @@ print(f"{'='*60}")
 
 # ── STEP 2: NULL AUDIT ───────────────────────────────────────────────────
 # WHY: Document data gaps BEFORE cleaning — this demonstrates Data
-# Engineering when 'identifying data gaps' per the job description.
+
 print("\n[STEP 2] Running null audit...")
 null_pct = (df.isnull().sum() / len(df) * 100).sort_values(ascending=False)
 print("\nTop 15 columns by null %:")
